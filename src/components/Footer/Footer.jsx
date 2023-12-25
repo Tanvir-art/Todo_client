@@ -8,15 +8,14 @@ const Footer = () => {
         
         <nav>
           <div className="grid grid-flow-col gap-4">
-            <Link to="https://github.com/Rajib-10" target="_blank">
+
             <FaGithub size={26}  />
-            </Link>
-            <Link to="https://www.linkedin.com/in/md-atiqul-islam-rajib-013a92298/" target="_blank">
+            
+           
             <FaLinkedin size={26}  />
-            </Link>
-            <Link to="https://www.facebook.com/atikul.rajib" target="_blank">
+          
             <FaFacebook size={26} />
-            </Link>
+          
           </div>
         </nav>
         <aside>

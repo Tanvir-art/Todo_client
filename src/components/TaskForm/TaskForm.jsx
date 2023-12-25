@@ -15,7 +15,7 @@
 //   const { data:tasks = [], refetch } = useQuery({
 //     queryKey: ["tasks"],
 //     queryFn: async () => {
-//       const res = await axios.get("http://localhost:5000/tasks");
+//       const res = await axios.get("https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks");
 //       return res.data;
 //     },
 //   });
@@ -29,7 +29,7 @@
 //         deadline: data.deadline,
 //         email: user.email
 //     }
-//     axios.post("http://localhost:5000/tasks",tasks)
+//     axios.post("https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks",tasks)
 //     .then(res=>{
 //         if(res.data.insertedId){
 //             toast.success("Task added successfully..")
@@ -163,7 +163,7 @@ const TaskForm = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/tasks")
+      .get("https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks")
       .then((res) => {
         const filteredData = res.data.filter(
           (task) => task.email === user.email
@@ -184,14 +184,14 @@ const TaskForm = () => {
 
     axios
       .post(
-        "http://localhost:5000/tasks",
+        "https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks",
         taskData
       )
       .then((res) => {
         if (res.data.insertedId) {
           toast.success("Task added successfully..");
           axios
-            .get("http://localhost:5000/tasks")
+            .get("https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks")
             .then((res) => {
               const filteredData = res.data.filter(
                 (task) => task.email === user.email

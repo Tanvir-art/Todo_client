@@ -40,7 +40,7 @@ const TaskFormCard = ({ task, index, tasks, setTasks }) => {
       if (result.isConfirmed) {
         axios
           .delete(
-            `http://localhost:5000/tasks/${id}`
+            `https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks/${id}`
           )
           .then((res) => {
             if (res.data.deletedCount > 0) {
@@ -70,13 +70,13 @@ const TaskFormCard = ({ task, index, tasks, setTasks }) => {
       if (result.isConfirmed) {
         axios
           .patch(
-            `http://localhost:5000/tasks/ongoing/${id}`
+            `https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks/ongoing/${id}`
           )
           .then((res) => {
             if (res.data.modifiedCount > 0) {
               axios
                 .get(
-                  "http://localhost:5000/tasks"
+                  "https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks"
                 )
                 .then((res) => {
                   const filteredTask = res.data.filter(
@@ -112,13 +112,13 @@ const TaskFormCard = ({ task, index, tasks, setTasks }) => {
       if (result.isConfirmed) {
         axios
           .patch(
-            `http://localhost:5000/tasks/complete/${id}`
+            `https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks/complete/${id}`
           )
           .then((res) => {
             if (res.data.modifiedCount > 0) {
               axios
                 .get(
-                  "http://localhost:5000/tasks"
+                  "https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks"
                 )
                 .then((res) => {
                   const filteredTask = res.data.filter(

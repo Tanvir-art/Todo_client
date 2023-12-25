@@ -14,7 +14,7 @@ const UpdateTask = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tasks/${id}`)
+      .get(`https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks/${id}`)
       .then((res) => {
         setTask(res.data);
       });
@@ -31,7 +31,7 @@ const UpdateTask = () => {
 
     axios
       .put(
-        `http://localhost:5000/tasks/${id}`,
+        `https://backend-task-cejnmn6ow-tanvir-haans-projects.vercel.app/tasks/${id}`,
         taskData
       )
       .then((res) => {

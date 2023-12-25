@@ -42,18 +42,18 @@ const Login = () => {
       });
     }
 
-    const handleGithubLogin = () =>{
-      githubLogin()
-      .then((result) => {
-        toast.success("User logged in Successfully.");
-        navigate("/dashboard");
-        console.log(result.user);
-      })
-      .catch((error) => {
-        toast.error(`${error.message}`);
-        console.log(error.message);
-      });
-    }
+    // const handleGithubLogin = () =>{
+    //   githubLogin()
+    //   .then((result) => {
+    //     toast.success("User logged in Successfully.");
+    //     navigate("/dashboard");
+    //     console.log(result.user);
+    //   })
+    //   .catch((error) => {
+    //     toast.error(`${error.message}`);
+    //     console.log(error.message);
+    //   });
+    // }
 
   return (
     <div className="flex justify-center items-center py-10">
@@ -106,9 +106,9 @@ const Login = () => {
             <button onClick={handleGoogleLogin}>
             <FaGoogle size={24} />
             </button>
-            <button onClick={handleGithubLogin}>
+            {/* <button onClick={handleGithubLogin}>
             <FaGithub size={24} />
-            </button>
+            </button> */}
         </div>
         <Link to="/register">
         <p className="text-xs text-center sm:px-6 ">
